@@ -23,6 +23,13 @@ class LinkedList {
 			current.next = new Node(value);
 		}
 	}
+
+	prepend(value) {
+		let newNode = new Node(value);
+
+		newNode.next = this.head;
+		this.head = newNode;
+	}
 }
 
 export { LinkedList };
