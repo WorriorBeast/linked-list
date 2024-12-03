@@ -30,6 +30,21 @@ class LinkedList {
 		newNode.next = this.head;
 		this.head = newNode;
 	}
+
+	size() {
+		let size = 1;
+		let current = this.head;
+
+		if (this.head == null) {
+			return 0;
+		} else {
+			while (current.next) {
+				current = current.next;
+				size++;
+			}
+			return size;
+		}
+	}
 }
 
 export { LinkedList };
