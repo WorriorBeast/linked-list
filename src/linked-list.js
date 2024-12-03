@@ -45,6 +45,10 @@ class LinkedList {
 			return size;
 		}
 	}
+
+	firstNode() {
+		return this.head;
+	}
 }
 
 export { LinkedList };
