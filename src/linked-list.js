@@ -58,6 +58,19 @@ class LinkedList {
 		}
 		return current;
 	}
+
+	at(index) {
+		if (index <= 0) return 'Index does not exist';
+
+		let current = this.head;
+
+		for (let i = 1; i < index; i++) {
+			if (current.next == null) return 'Index does not exist';
+
+			current = current.next;
+		}
+		return current;
+	}
 }
 
 export { LinkedList };
