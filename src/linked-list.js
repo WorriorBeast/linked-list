@@ -110,6 +110,18 @@ class LinkedList {
 		}
 		return null;
 	}
+
+	toString() {
+		let current = this.head;
+		let string = '';
+
+		while (current) {
+			string += `( ${current.data} ) -> `;
+			current = current.next;
+		}
+		string += 'null';
+		return string;
+	}
 }
 
 export { LinkedList };
