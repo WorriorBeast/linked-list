@@ -95,6 +95,21 @@ class LinkedList {
 		}
 		return false;
 	}
+
+	find(value) {
+		let current = this.head;
+		let index = 1;
+
+		while (current.next) {
+			if (current.data === value) {
+				return index;
+			} else {
+				current = current.next;
+				index++;
+			}
+		}
+		return null;
+	}
 }
 
 export { LinkedList };
