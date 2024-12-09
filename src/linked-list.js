@@ -124,4 +124,16 @@ class LinkedList {
 	}
 }
 
-export { LinkedList };
+const classMethodList = {
+	parameterRequired: {
+		returns: ['contains', 'find', 'at'],
+		edit: ['append', 'prepend'],
+	},
+	parameterNotRequired: {
+		edit: ['pop'],
+		returns: ['size', 'firstNode', 'tail'],
+		visualStructure: ['toString'],
+	},
+};
+
+export { LinkedList, classMethodList };
