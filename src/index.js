@@ -4,6 +4,7 @@ import { LinkedList, classMethodList } from './linked-list';
 const output = document.getElementById('output');
 const btnContainer = document.querySelector('.button-container');
 const input = document.getElementById('methods');
+const methodDescription = document.getElementById('method-description');
 
 const list = new LinkedList();
 
@@ -57,4 +58,10 @@ input.addEventListener('input', () => {
 		enabledBtns.forEach((btn) => (btn.disabled = true));
 	}
 	previousInput = input.value;
+});
+
+btnContainer.addEventListener('mouseover', (e) => {
+	if (e.target.nodeName !== 'BUTTON') return;
+
+	methodDescription.textContent = e.target.dataset.description;
 });

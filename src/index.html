@@ -15,19 +15,83 @@
 			placeholder="Input for applicable methods"
 		/>
 		<div class="button-container">
-			<button type="button" data-method="append" disabled>append()</button>
-			<button type="button" data-method="prepend" disabled>prepend()</button>
-			<button type="button" data-method="size">size()</button>
-			<button type="button" data-method="firstNode">firstNode()</button>
-			<button type="button" data-method="tail">tail()</button>
-			<button type="button" data-method="at" disabled>at()</button>
-			<button type="button" data-method="pop">pop()</button>
-			<button type="button" data-method="contains" disabled>
+			<button
+				type="button"
+				data-method="append"
+				data-description="Adds a new node containing value to the end of the list"
+				disabled
+			>
+				append()
+			</button>
+			<button
+				type="button"
+				data-method="prepend"
+				data-description="Prepend adds a new node containing value to the start of the list"
+				disabled
+			>
+				prepend()
+			</button>
+			<button
+				type="button"
+				data-method="size"
+				data-description="Returns the total number of nodes in the list"
+			>
+				size()
+			</button>
+			<button
+				type="button"
+				data-method="firstNode"
+				data-description="Returns the first node in the list"
+			>
+				firstNode()
+			</button>
+			<button
+				type="button"
+				data-method="tail"
+				data-description="Returns the last node in the list"
+			>
+				tail()
+			</button>
+			<button
+				type="button"
+				data-method="at"
+				data-description="Returns the node at the given index"
+				disabled
+			>
+				at()
+			</button>
+			<button
+				type="button"
+				data-method="pop"
+				data-description="Removes the last element from the list"
+			>
+				pop()
+			</button>
+			<button
+				type="button"
+				data-method="contains"
+				data-description="Returns true if the passed in value is in the list and otherwise returns false"
+				disabled
+			>
 				contains()
 			</button>
-			<button type="button" data-method="find" disabled>find()</button>
-			<button type="button" data-method="toString">toString()</button>
+			<button
+				type="button"
+				data-method="find"
+				data-description="Returns the index of the node containing value, or null if not found"
+				disabled
+			>
+				find()
+			</button>
+			<button
+				type="button"
+				data-method="toString"
+				data-description="Represents the linked list object as string. The format is: ( value ) -> ( value ) -> ( value ) -> null"
+			>
+				toString()
+			</button>
 		</div>
 		<div>Output: <span id="output"></span></div>
+		<div id="method-description"></div>
 	</body>
 </html>
