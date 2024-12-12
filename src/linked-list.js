@@ -147,12 +147,35 @@ class LinkedList {
 
 		previous.next = new Node(value);
 	}
+
+	removeAt(index) {
+		if (Number(index) <= 0) return;
+		if (Number(index) == 1) {
+			this.head = this.head.next;
+			return;
+		}
+
+		let current = this.head;
+		let currentIndex = 1;
+		let previous;
+
+		while (current) {
+			if (currentIndex === Number(index)) {
+				previous.next = current.next;
+				return;
+			} else {
+				previous = current;
+				current = current.next;
+				currentIndex++;
+			}
+		}
+	}
 }
 
 const classMethodList = {
 	parameterRequired: {
 		returns: ['contains', 'find', 'at'],
-		edit: ['append', 'prepend'],
+		edit: ['append', 'prepend', 'removeAt'],
 		doubleParameter: ['insertAt'],
 	},
 	parameterNotRequired: {
