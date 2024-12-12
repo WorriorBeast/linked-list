@@ -122,12 +122,38 @@ class LinkedList {
 		string += 'null';
 		return string;
 	}
+
+	insertAt(value, index) {
+		let current = this.head;
+		let currentIndex = 1;
+		let previous;
+
+		if (this.head == null) {
+			this.head = new Node(value);
+		}
+
+		while (current) {
+			if (currentIndex === index) {
+				const newNode = new Node(value);
+
+				newNode.next = current;
+				previous.next = newNode;
+			} else {
+				previous = current;
+				current = current.next;
+				currentIndex++;
+			}
+		}
+
+		previous.next = new Node(value);
+	}
 }
 
 const classMethodList = {
 	parameterRequired: {
 		returns: ['contains', 'find', 'at'],
 		edit: ['append', 'prepend'],
+		doubleParameter: ['insertAt'],
 	},
 	parameterNotRequired: {
 		edit: ['pop'],

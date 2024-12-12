@@ -9,7 +9,8 @@ h1 {
 	text-align: center;
 }
 
-#methods {
+#single-param,
+#double-param {
 	display: block;
 	margin: 0 auto 20px;
 	width: max(150px, 40%);

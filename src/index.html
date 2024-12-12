@@ -7,12 +7,19 @@
 	</head>
 	<body>
 		<h1>Linked List</h1>
-		<label for="methods"></label>
+		<label for="single-param"></label>
 		<input
 			type="text"
-			name="methods"
-			id="methods"
+			name="single-param"
+			id="single-param"
 			placeholder="Input for applicable methods"
+		/>
+		<label for="double-param"></label>
+		<input
+			type="number"
+			name="double-param"
+			id="double-param"
+			placeholder="Enter index number for insertAt() only"
 		/>
 		<div class="button-container">
 			<button
@@ -20,6 +27,7 @@
 				data-method="append"
 				data-description="Adds a new node containing value to the end of the list"
 				disabled
+				single-parameter
 			>
 				append()
 			</button>
@@ -28,6 +36,7 @@
 				data-method="prepend"
 				data-description="Prepend adds a new node containing value to the start of the list"
 				disabled
+				single-parameter
 			>
 				prepend()
 			</button>
@@ -35,6 +44,7 @@
 				type="button"
 				data-method="size"
 				data-description="Returns the total number of nodes in the list"
+				no-parameter
 			>
 				size()
 			</button>
@@ -42,6 +52,7 @@
 				type="button"
 				data-method="firstNode"
 				data-description="Returns the first node in the list"
+				no-parameter
 			>
 				firstNode()
 			</button>
@@ -49,6 +60,7 @@
 				type="button"
 				data-method="tail"
 				data-description="Returns the last node in the list"
+				no-parameter
 			>
 				tail()
 			</button>
@@ -57,6 +69,7 @@
 				data-method="at"
 				data-description="Returns the node at the given index"
 				disabled
+				single-parameter
 			>
 				at()
 			</button>
@@ -64,6 +77,7 @@
 				type="button"
 				data-method="pop"
 				data-description="Removes the last element from the list"
+				no-parameter
 			>
 				pop()
 			</button>
@@ -72,6 +86,7 @@
 				data-method="contains"
 				data-description="Returns true if the passed in value is in the list and otherwise returns false"
 				disabled
+				single-parameter
 			>
 				contains()
 			</button>
@@ -80,6 +95,7 @@
 				data-method="find"
 				data-description="Returns the index of the node containing value, or null if not found"
 				disabled
+				single-parameter
 			>
 				find()
 			</button>
@@ -87,8 +103,18 @@
 				type="button"
 				data-method="toString"
 				data-description="Represents the linked list object as string. The format is: ( value ) -> ( value ) -> ( value ) -> null"
+				no-parameter
 			>
 				toString()
+			</button>
+			<button
+				type="button"
+				data-method="insertAt"
+				data-description="Inserts a new node with the provided value at the given index"
+				disabled
+				double-parameter
+			>
+				insertAt()
 			</button>
 		</div>
 		<div>Output: <span id="output"></span></div>
